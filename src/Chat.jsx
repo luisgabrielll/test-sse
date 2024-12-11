@@ -7,7 +7,7 @@ const App = () => {
     const eventSource = new EventSource(
       "https://api.product.markts.abcdev.net/sse/notifications"
     );
-
+    console.log("meu evento", eventSource);
     eventSource.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data); // Parseia os dados recebidos
